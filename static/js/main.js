@@ -1,18 +1,14 @@
-$(document).ready(function() {
+const nav = document.querySelector(".primary-navigation");
+const navToggle = document.querySelector(".mobile-nav-toggle");
 
-    function toggleSidebar() {
-      $(".button").toggleClass("active");
-      $("main").toggleClass("move-to-left");
-      $(".sidebar-item").toggleClass("active");
+navToggle.addEventListener("click", () => {
+    
+    const visiblity = nav.getAttribute("data-visible");
+    if (visiblity === "false") {
+        nav.setAttribute("data-visible", true);
+        navToggle.setAttribute("aria-expanded", true);
+    } else {
+        nav.setAttribute("data-visible", false);
+        navToggle.setAttribute("aria-expanded", false);
     }
-  
-    $(".button").on("click tap", function() {
-      toggleSidebar();
-    });
-  
-    $(document).keyup(function(e) {
-      if (e.keyCode === 27) {
-        toggleSidebar();
-      }
-    });
-});
+})
