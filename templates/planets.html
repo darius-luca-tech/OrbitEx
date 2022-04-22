@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="../media/images/logo-mobile.png">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap" rel="stylesheet">    
+    <title>Orbit Exploration</title>
+    <script src="../static/js/tabs-destination.js" defer></script>
+    <script src="../static/js/navbar-mobile.js" defer></script>
+</head>
+
+<body class="planets">
+    <header class="primary-header flex">
+        <div class="logo">
+            <img href="#">
+        </div>
+    
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Meniu</span></button>
+        <nav>
+            <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
+                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"><span aria-hidden="true">00</span>Home</a>
+                <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="planets.html"><span aria-hidden="true">01</span>Planete</a>
+                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew.html"><span aria-hidden="true">02</span>Obiecte</a>
+                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="technology.html"><span aria-hidden="true">03</span>Credits</a>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main" class="grid-container grid-container--planets flow">
+        <h1 class="numbered-title"><span aria-hidden="true">01</span>Alegeti Planeta:</h1>
+
+        <picture id="earth-image">
+            <source srcset="../media/planets/image-earth.webp" type="image/webp">
+            <img src="../media/planets/image-earth.png">
+        </picture>
+
+        <picture hidden id="moon-image">
+            <source srcset="../media/planets/image-moon.webp" type="image/webp">
+            <img src="../media/planets/image-moon.png">
+        </picture>
+
+        <picture hidden id="europa-image">
+            <source srcset="../media/planets/image-europa.webp" type="image/webp">
+            <img src="../media/planets/image-europa.png">
+        </picture>
+
+        <picture hidden id="titan-image">
+            <source srcset="../media/planets/image-titan.webp" type="image/webp">
+            <img src="../media/planets/image-titan.png">
+        </picture>
+
+        <picture hidden id="uranus-image">
+            <source srcset="../media/planets/image-uranus.webp" type="image/webp">
+            <img src="../media/planets/image-uranus.png">
+        </picture>
+
+        <div class="tab-list underline-indicators flex" role="tablist" aria-label="planets list">
+            <button aria-selected="true" role="tab" aria-controls="earth-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
+            data-image="earth-image">Terra</button>
+
+            <button aria-selected="false" role="tab" aria-controls="moon-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
+            data-image="moon-image">Luna</button>
+
+            <button aria-selected="false" role="tab" aria-controls="europa-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
+            data-image="europa-image">Europa</button>
+
+            <button aria-selected="false" role="tab" aria-controls="titan-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
+            data-image="titan-image">Titan</button>
+
+            <button aria-selected="false" role="tab" aria-controls="uranus-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
+            data-image="uranus-image">Uranus</button>
+        </div>
+
+        <article class="planets-info flow" id="earth-tab" tabindex="0" role="tabpanel">
+            <h2 class="fs-800 uppercase ff-serif">Terra</h2>
+      
+            <p>Este a treia planetă de la Soare și cea mai mare dintre planetele telurice ale Sistemului Solar, atât pentru masă, cât și pentru diametru. Este singurul corp ceresc despre care se știe că adăpostește viață. Aproximativ 29,2 % din suprafața Pământului este un uscat format din continente și insule, restul de 70,8 % fiind acoperit cu apă.</p>
+            
+            <div class="planets-meta flex">
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Orbita Parcursa</h3>
+                    <p class="ff-serif uppercase">61 %</p>
+                </div>
+            </div>
+        </article>
+
+        
+        <article hidden class="planets-info flow" id="moon-tab" tabindex="0" role="tabpanel">
+            <h2 class="fs-800 uppercase ff-serif">Luna</h2>
+
+            <p>Luna este un corp astronomic care orbitează planeta Pământ, fiind singurul său satelit natural permanent. Este al cincilea cel mai mare⁠(d) satelit natural din Sistemul Solar, și cel mai mare dintre sateliți planetari relativ la dimensiunea planetei pe care o orbitează (obiectul său primar). </p>
+
+            <div class="planets-meta flex">
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Distanta aproximativa:</h3>
+                    <p class="ff-serif uppercase">384,400 km</p>
+                </div>
+
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Orbita Parcursa</h3>
+                    <p class="ff-serif uppercase">61 %</p>
+                </div>
+            </div>
+        </article>
+    </main>
+    
+</body>
+</html>

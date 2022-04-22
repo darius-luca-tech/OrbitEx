@@ -482,41 +482,25 @@ body {
 }
 
 
-/* destination */
-.destination {
-    background-image: url(./assets/destination/background-destination-mobile.jpg);
+/* planets */
+.planets {
+    background-image: url("../../media/planets/background-destination-mobile.jpg");
 }
 
 @media (min-width: 35rem) {
-    .destination {
+    .planets {
         background-position: center center;
-        background-image: url(./assets/destination/background-destination-tablet.jpg);
+        background-image: url("../../media/planets/background-destination-tablet.jpg");
     }
 }
 
 @media (min-width: 45rem) {
-    .destination {
-        background-image: url(./assets/destination/background-destination-desktop.jpg);
+    .planets {
+        background-image: url("../../media/planets/background-destination-desktop.jpg");
     }
 } 
 
-/* crew */
-.crew {
-    background-image: url(./assets/home/background-crew-mobile.jpg);
-}
-
-@media (min-width: 35rem) {
-    .crew {
-        background-position: center center;
-        background-image: url(./assets/crew/background-crew-tablet.jpg);
-    }
-}
-
-@media (min-width: 45rem) {
-    .crew {
-        background-image: url(./assets/crew/background-crew-desktop.jpg);
-    }
-} 
+/* crew *
 
 /* ----------------------------- */
 /* Layout                        */
@@ -539,9 +523,9 @@ body {
     grid-area: title;
 }
 
-/* destination layout */
+/* planets layout */
 
-.grid-container--destination {
+.grid-container--planets {
     --flow-space: 2rem;
     grid-template-areas: 
         'title'
@@ -550,59 +534,32 @@ body {
         'content';
 }
 
-.grid-container--destination > picture {
+.grid-container--planets > picture {
     grid-area: image;
     max-width: 60%;
     align-self: start;
 }
 
-.grid-container--destination > .tab-list {
+.grid-container--planets > .tab-list {
     grid-area: tabs;
 }
 
-.grid-container--destination > .destination-info {
+.grid-container--planets > .planets-info {
     grid-area: content;
 }
 
-.destination-meta {
+.planets-meta {
     flex-direction: column;
     border-top: 1px solid hsl( var(--clr-white) / .1);
     padding-top: 2.5rem;
     margin-top: 2.5rem;
 }
 
-.destination-meta p {
+.planets-meta p {
     font-size: 1.75rem;
 }
 
 /* crew layout */
-
-.grid-container--crew {
-    --flow-space: 2rem;
-    grid-template-areas: 
-        'title'
-        'image'
-        'tabs'
-        'content';
-}
-
-.grid-container--crew > picture {
-    grid-area: image;
-    max-width: 60%;
-    border-bottom: 1px solid hsl( var(--clr-white) / .1);
-}
-
-.grid-container--crew > .dot-indicators {
-    grid-area: tabs;
-}
-
-.grid-container--crew > .crew-details {
-    grid-area: content;
-}
-
-.crew-details h2 {
-    color: hsl( var(--clr-white) / .5);
-}
 
 @media (min-width: 35em) {
     .numbered-title {
@@ -610,21 +567,10 @@ body {
         margin-top: 2rem;
     }
     
-    .destination-meta {
+    .planets-meta {
         flex-direction: row;
         justify-content: space-evenly;
     }
-    
-    .grid-container--crew {
-        padding-bottom: 0;
-        grid-template-areas: 
-            'title'
-            'content'
-            'tabs'
-            'image';
-    }
-    
-    
 }
 
 @media (min-width: 45em) {
@@ -647,7 +593,7 @@ body {
         grid-column: 3;
     }
     
-    .grid-container--destination {
+    .grid-container--planets {
         justify-items: start;
         align-content: start;
         grid-template-areas: 
@@ -656,28 +602,12 @@ body {
             '. image content .';
     }
     
-    .grid-container--destination > picture {
+    .grid-container--planets > picture {
         max-width: 90%;
     }
      
-    .destination-meta {
+    .planets-meta {
         --gap: min(6vw, 6rem);
         justify-content: start;
     }
-    
-    .grid-container--crew {
-        grid-template-columns: minmax(1rem, 1fr) minmax(0, 37rem) minmax(0, 23rem) minmax(1rem, 1fr);
-        justify-items: start;
-        grid-template-areas: 
-            '. title title .'
-            '. content image .'
-            '. tabs image .';
-    } 
-    
-    .grid-container--crew > picture {
-        grid-column: span 2;
-        align-self: end; 
-        max-width: 90%;
-    }
-
 }
