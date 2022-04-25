@@ -290,7 +290,7 @@ select {
     margin: 1rem clamp(1.5rem, 2vw, 3.5rem);
     width: 100%;
     height: 100px;
-    background-image: url(../../media/images/logo-removebg-preview.png);
+    background-image: url(/static/media/images/logo-removebg-preview.png);
     background-repeat: no-repeat;
 }
 
@@ -335,7 +335,7 @@ video {
         margin: 0.3rem clamp(0.5rem, 3vw, 0.3rem);
         width: 100%;
         height: 100px;
-        background-image: url(../../media/images/logo-mobile.png);
+        background-image: url(/static/media/images/logo-mobile.png);
         background-repeat: no-repeat;
     }
 }
@@ -371,7 +371,7 @@ video {
         right: 1rem;
         top: 2rem;
         background: transparent;
-        background-image: url(../../media/shared/icon-hamburger.svg);
+        background-image: url(/static/media/shared/icon-hamburger.svg);
         background-repeat: no-repeat;
         background-position: center;
         width: 1.5rem;
@@ -380,7 +380,7 @@ video {
     }
     
     .mobile-nav-toggle[aria-expanded="true"] {
-        background-image: url(../../media/shared/icon-close.svg);
+        background-image: url(/static/media/shared/icon-close.svg);
     }
     
     .mobile-nav-toggle:focus-visible {
@@ -484,28 +484,21 @@ body {
 
 /* planets */
 .planets {
-    background-image: url("../../media/planets/background-destination-mobile.jpg");
+    background-image: url("/static/media/planets/background-destination-mobile.jpg");
 }
 
 @media (min-width: 35rem) {
     .planets {
         background-position: center center;
-        background-image: url("../../media/planets/background-destination-tablet.jpg");
+        background-image: url("/static/media/planets/background-destination-tablet.jpg");
     }
 }
 
 @media (min-width: 45rem) {
     .planets {
-        background-image: url("../../media/planets/background-destination-desktop.jpg");
+        background-image: url("/static/media/planets/background-destination-desktop.jpg");
     }
 } 
-
-/* crew *
-
-/* ----------------------------- */
-/* Layout                        */
-/* ----------------------------- */
-
 
 .grid-container {
     text-align: center;

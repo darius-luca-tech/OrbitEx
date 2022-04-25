@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="32x32" href="../media/images/logo-mobile.png">
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/media/images/logo-mobile.png">
+    <link rel="stylesheet" href="/static/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap" rel="stylesheet">    
     <title>Orbit Exploration</title>
-    <script src="../static/js/tabs-destination.js" defer></script>
-    <script src="../static/js/navbar-mobile.js" defer></script>
+    <script src="/static/js/tabs-destination.js" defer></script>
+    <script src="/static/js/navbar-mobile.js" defer></script>
 </head>
 
 <body class="planets">
     <header class="primary-header flex">
+        
         <div class="logo">
             <img href="#">
         </div>
@@ -22,10 +23,10 @@
         <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Meniu</span></button>
         <nav>
             <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
-                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"><span aria-hidden="true">00</span>Home</a>
-                <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="planets.html"><span aria-hidden="true">01</span>Planete</a>
+                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="/"><span aria-hidden="true">00</span>Acasa</a>
+                <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="/planets"><span aria-hidden="true">01</span>Planete</a>
                 <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew.html"><span aria-hidden="true">02</span>Obiecte</a>
-                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="technology.html"><span aria-hidden="true">03</span>Credits</a>
+                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="technology.html"><span aria-hidden="true">03</span>Credite</a>
             </ul>
         </nav>
     </header>
@@ -34,28 +35,28 @@
         <h1 class="numbered-title"><span aria-hidden="true">01</span>Alegeti Planeta:</h1>
 
         <picture id="earth-image">
-            <source srcset="../media/planets/image-earth.webp" type="image/webp">
-            <img src="../media/planets/image-earth.png">
+            <source srcset="/static/media/planets/image-earth.webp" type="image/webp">
+            <img src="/static/media/planets/image-earth.png">
         </picture>
 
         <picture hidden id="moon-image">
-            <source srcset="../media/planets/image-moon.webp" type="image/webp">
-            <img src="../media/planets/image-moon.png">
+            <source srcset="/static/media/planets/image-moon.webp" type="image/webp">
+            <img src="/static/media/planets/image-moon.png">
         </picture>
 
-        <picture hidden id="europa-image">
-            <source srcset="../media/planets/image-europa.webp" type="image/webp">
-            <img src="../media/planets/image-europa.png">
-        </picture>
-
-        <picture hidden id="titan-image">
-            <source srcset="../media/planets/image-titan.webp" type="image/webp">
-            <img src="../media/planets/image-titan.png">
+        <picture hidden id="mars-image">
+            <source srcset="/static/media/planets/image-mars.webp" type="image/webp">
+            <img src="/static/media/planets/image-mars.png">
         </picture>
 
         <picture hidden id="uranus-image">
-            <source srcset="../media/planets/image-uranus.webp" type="image/webp">
-            <img src="../media/planets/image-uranus.png">
+            <source srcset="/static/media/planets/image-uranus.webp" type="image/webp">
+            <img src="/static/media/planets/image-uranus.png">
+        </picture>
+
+        <picture hidden id="neptune-image">
+            <source srcset="/static/media/planets/image-neptune.webp" type="image/webp">
+            <img src="/static/media/planets/image-neptune.png">
         </picture>
 
         <div class="tab-list underline-indicators flex" role="tablist" aria-label="planets list">
@@ -65,14 +66,14 @@
             <button aria-selected="false" role="tab" aria-controls="moon-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
             data-image="moon-image">Luna</button>
 
-            <button aria-selected="false" role="tab" aria-controls="europa-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
-            data-image="europa-image">Europa</button>
-
-            <button aria-selected="false" role="tab" aria-controls="titan-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
-            data-image="titan-image">Titan</button>
+            <button aria-selected="false" role="tab" aria-controls="mars-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
+            data-image="mars-image">Marte</button>
 
             <button aria-selected="false" role="tab" aria-controls="uranus-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
             data-image="uranus-image">Uranus</button>
+
+            <button aria-selected="false" role="tab" aria-controls="neptune-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
+            data-image="neptune-image">Neptun</button>
         </div>
 
         <article class="planets-info flow" id="earth-tab" tabindex="0" role="tabpanel">
@@ -106,6 +107,65 @@
                 </div>
             </div>
         </article>
+
+                
+        <article hidden class="planets-info flow" id="mars-tab" tabindex="0" role="tabpanel">
+            <h2 class="fs-800 uppercase ff-serif">Marte</h2>
+
+            <p>Marte este a patra planetă de la Soare și penultima ca mărime din Sistemul Solar. Marte poartă numele zeului roman al războiului și este adesea denumită Planeta Roșie, deoarece oxidul de fier predominant pe suprafața sa îi conferă un aspect roșiatic distinctiv între corpurile astronomice vizibile cu ochiul liber.</p>
+            <div class="planets-meta flex">
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Distanta aproximativa:</h3>
+                    <p class="ff-serif uppercase"> 251.968.518 km</p>
+                </div>
+
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Orbita Parcursa</h3>
+                    <p class="ff-serif uppercase">61 %</p>
+                </div>
+            </div>
+        </article>
+
+        <article hidden class="planets-info flow" id="uranus-tab" tabindex="0" role="tabpanel">
+            <h2 class="fs-800 uppercase ff-serif">Uranus</h2>
+
+            <p>Uranus este a șaptea planetă de la Soare. Numele său este o referință la zeul grec al cerului, Uranus, care, conform mitologiei grecești, a fost bunicul lui Zeus și tatăl lui Cronos. Este a treia planetă ca mărime și a patra ca masivitate din Sistemul Solar.</p>
+            <div class="planets-meta flex">
+
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Distanta aproximativa:</h3>
+                    <p class="ff-serif uppercase"> 3.095.031.101 km </p>
+                </div>
+
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Orbita Parcursa</h3>
+                    <p class="ff-serif uppercase">61 %</p>
+                </div>
+
+            </div>
+        </article>
+
+        <article hidden class="planets-info flow" id="neptune-tab" tabindex="0" role="tabpanel">
+            <h2 class="fs-800 uppercase ff-serif">Neptun</h2>
+
+            <p>Neptun este a opta planeta de la Soare din sistemul solar. Numită după zeul roman al mării, este a patra planetă după diametru și a treia după masă. Neptun are o masă de 17 ori mai mare decât cea a Pământului și puțin mai mare decât masa lui Uranus, care este de 15 ori mai greu decât Pământul, dar nu la fel de dens.</p>
+            <div class="planets-meta flex">
+
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Distanta aproximativa:</h3>
+                    <p class="ff-serif uppercase"> 4.400.000.000 km </p>
+                </div>
+
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Orbita Parcursa</h3>
+                    <p class="ff-serif uppercase">61 %</p>
+                </div>
+
+            </div>
+        </article>        
+
+      
+
     </main>
     
 </body>

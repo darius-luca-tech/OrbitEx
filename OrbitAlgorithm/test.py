@@ -12,8 +12,8 @@ class Percentage:
 
 Percentage.OrbitPerihelion = 0
 Percentage.NewOrbitPerihelion = 0
-Percentage.planetArrray = ["Earth", "Moon", "Mars", "Uranus"]
-Percentage.planetDictionary = {"Earth" : 365, "Moon" : 27, "Mars" : 687, "Uranus" : 30768}
+Percentage.planetArrray = ["Earth", "Moon", "Mars", "Uranus", "Neptune"]
+Percentage.planetDictionary = {"Earth" : 365, "Moon" : 27, "Mars" : 687, "Uranus" : 30768, "Neptune" : 60195}
 Percentage.current_year = date.today().year
 Percentage.today = int(datetime.today().strftime("%d"))
 Percentage.thisMonth = int(datetime.today().strftime("%m"))
@@ -79,6 +79,6 @@ def Orbits():
 
 						Percentage.percentage = new / ValuePercent
 						Percentage.percentage = round(Percentage.percentage, 2)
-						print(str(Percentage.percentage) + " - " + planetName)
+						print(str(Percentage.percentage) + " - " + planetName + " - " + str(new))
 
 Orbits()
