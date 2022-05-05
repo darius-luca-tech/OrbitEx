@@ -107,6 +107,7 @@ body {
     grid-template-rows: min-content 1fr;
     
     overflow-x: hidden;
+    overflow-y: visible;
 }
 
 /* make images easier to work with */
@@ -410,7 +411,7 @@ video {
         height: 1px;
         width: 100%;
         margin-right: -2.5rem;
-        margin-left: -10rem;
+        margin-left: -20rem;
         background: hsl( var(--clr-white) / .25);
         order: 1;
     }
@@ -446,6 +447,7 @@ video {
 
 .tab-list {
     --gap: 2rem;
+    overflow-y: visible !important;
 }
 
 .dot-indicators > * {
@@ -509,7 +511,7 @@ body {
 }
 
 .grid-container p:not([class]) {
-    max-width: 50ch;
+    max-width: 100ch;
 }
 
 .numbered-title {
@@ -529,7 +531,7 @@ body {
 
 .grid-container--planets > picture {
     grid-area: image;
-    max-width: 60%;
+    max-width: 30%;
     align-self: start;
 }
 
@@ -566,11 +568,12 @@ body {
     }
 }
 
+
 @media (min-width: 45em) {
     .grid-container {
         text-align: left;
         column-gap: var(--container-gap, 2rem);
-        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
+        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 3fr);
     }
     
     .grid-container--home {

@@ -1,19 +1,38 @@
 from flask import Flask, render_template
-from OrbitAlgorithm.test import Percentage
+from OrbitAlgorithm.algorithm import Percentage
 
 percentage = Percentage()
+percentage.Orbits()
 
 app = Flask(__name__, static_folder="F://Work&Projects//Atestate//OrbitEx//static//", template_folder="F://Work&Projects//Atestate//OrbitEx//templates//")
 
 @app.route('/')
 def mainPage():
+    percentage.Orbits()
     return render_template('index.html')
 
 @app.route('/planets')
 def planetsPage():
-    #TO-DO: implement algortihm
-    percentage.Orbits()
-    return render_template('planets.html', earthPercentage = percentage.percentageDictionary["Earth"], moonPercentage = percentage.percentageDictionary["Moon"], marsPercentage = percentage.percentageDictionary["Mars"], uranusPercentage = percentage.percentageDictionary["Uranus"], neptunePercentage = percentage.percentageDictionary["Neptune"])
+
+    return render_template(
+        'planets.html', 
+        earthPercentage = percentage.percentageDictionary["Earth"], 
+        moonPercentage = percentage.percentageDictionary["Moon"], 
+        marsPercentage = percentage.percentageDictionary["Mars"], 
+        uranusPercentage = percentage.percentageDictionary["Uranus"], 
+        neptunePercentage = percentage.percentageDictionary["Neptune"],
+        venusPercentage = percentage.percentageDictionary["Venus"],
+        mercuryPercentage = percentage.percentageDictionary["Mercury"],
+        jupiterPercentage = percentage.percentageDictionary["Jupiter"],
+        saturnPercentage = percentage.percentageDictionary["Saturn"])
+
+@app.route('/comets')
+def commetsPage():
+    return render_template(
+        'comets.html', 
+        halleyPercentage = percentage.percentageDictionary["Halley"],
+        enckePercentage = percentage.percentageDictionary["Encke"],
+        fayePercentage = percentage.percentageDictionary["Faye"])
 
 if __name__ == '__main__':
     app.run()

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/media/images/logo-mobile.png">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap" rel="stylesheet">    
+    <title>Orbit Exploration</title>
+    <script src="/static/js/tabs-destination.js" defer></script>
+    <script src="/static/js/navbar-mobile.js" defer></script>
+</head>
+
+<body class="planets">
+    <header class="primary-header flex">
+        
+        <div class="logo">
+            <img href="#">
+        </div>
+    
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Meniu</span></button>
+        <nav>
+            <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
+                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="/"><span aria-hidden="true">00</span>Acasa</a>
+                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="/planets"><span aria-hidden="true">01</span>Planete</a>
+                <li class="active"><a class=" ff-sans-cond uppercase text-white letter-spacing-2" href="/comets"><span aria-hidden="true">02</span>Comete</a>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main" class="grid-container grid-container--planets flex">
+        <h1 class="numbered-title"><span aria-hidden="true">01</span>Alege Cometa:</h1>
+
+        <picture id="halley-image">
+            <source srcset="/static/media/comets/image-halley.webp" type="image/webp">
+            <img src="/static/media/comets/image-halley.png">
+        </picture>
+
+        <picture hidden id="encke-image">
+            <source srcset="/static/media/comets/image-encke.webp" type="image/webp">
+            <img src="/static/media/comets/image-encke.png">
+        </picture>
+
+        <!-- <picture hidden id="moon-image">
+            <source srcset="/static/media/planets/image-moon.webp" type="image/webp">
+            <img src="/static/media/planets/image-moon.png">
+        </picture> -->
+
+
+        <div class="tab-list underline-indicators flex" role="tablist" aria-label="planets list">
+            <button aria-selected="true" role="tab" aria-controls="halley-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
+            data-image="halley-image">Halley</button>
+
+            <button aria-selected="false" role="tab" aria-controls="encke-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
+            data-image="encke-image">Encke</button>
+
+            <!-- <button aria-selected="false" role="tab" aria-controls="moon-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
+            data-image="moon-image">Luna</button> -->
+
+            
+        </div>
+
+        <article class="planets-info flow" id="halley-tab" tabindex="0" role="tabpanel">
+            <h2 class="fs-800 uppercase ff-serif">Halley</h2>
+      
+            <p> Cometa Halley este cea mai faimoasă dintre cometele periodice, putând fi văzută aproximativ la fiecare 75–76 de ani.</p>            
+            <div class="planets-meta flex">
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Orbita Parcursa</h3>
+                    <p class="ff-serif uppercase">{{ halleyPercentage }} %</p>
+                </div>
+            </div>
+        </article>
+
+        <article hidden class="planets-info flow" id="encke-tab" tabindex="0" role="tabpanel">
+            <h2 class="fs-800 uppercase ff-serif">Encke</h2>
+      
+            <p> Cometa Encke sau Cometa lui Encke este o cometă periodică care a fost descoperită la data de 17 ianuarie 1786 de astronomul francez Pierre Méchain la Paris. Ea poartă numele astronomului german Johann Franz Encke care i-a determinat periodicitatea. </p>            
+            <div class="planets-meta flex">
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Orbita Parcursa</h3>
+                    <p class="ff-serif uppercase">{{ enckePercentage }} %</p>
+                </div>
+            </div>
+        </article>
+
+        
+        <!-- <article hidden class="planets-info flow" id="moon-tab" tabindex="0" role="tabpanel">
+            <h2 class="fs-800 uppercase ff-serif">Luna</h2>
+
+            <p>Luna este un corp astronomic care orbitează planeta Pământ, fiind singurul său satelit natural permanent. Este al cincilea cel mai mare⁠(d) satelit natural din Sistemul Solar, și cel mai mare dintre sateliți planetari relativ la dimensiunea planetei pe care o orbitează (obiectul său primar). </p>
+
+            <div class="planets-meta flex">
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Distanta aproximativa:</h3>
+                    <p class="ff-serif uppercase">384,400 km</p>
+                </div>
+
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Orbita Parcursa</h3>
+                    <p class="ff-serif uppercase">{{ moonPercentage }} %</p>
+                </div>
+            </div>
+        </article> -->
+
+                
+    
+    
+    </main>
+    
+</body>
+</html>

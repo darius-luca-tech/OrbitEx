@@ -25,24 +25,23 @@
             <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
                 <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="/"><span aria-hidden="true">00</span>Acasa</a>
                 <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="/planets"><span aria-hidden="true">01</span>Planete</a>
-                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew.html"><span aria-hidden="true">02</span>Obiecte</a>
-                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="technology.html"><span aria-hidden="true">03</span>Credite</a>
+                <li><a class=" ff-sans-cond uppercase text-white letter-spacing-2" href="/comets"><span aria-hidden="true">02</span>Comete</a>
             </ul>
         </nav>
     </header>
 
-    <main id="main" class="grid-container grid-container--planets flow">
-        <h1 class="numbered-title"><span aria-hidden="true">01</span>Alegeti Planeta:</h1>
+    <main id="main" class="grid-container grid-container--planets flex">
+        <h1 class="numbered-title"><span aria-hidden="true">01</span>Alege Planeta:</h1>
 
         <picture id="earth-image">
             <source srcset="/static/media/planets/image-earth.webp" type="image/webp">
             <img src="/static/media/planets/image-earth.png">
         </picture>
 
-        <picture hidden id="moon-image">
+        <!-- <picture hidden id="moon-image">
             <source srcset="/static/media/planets/image-moon.webp" type="image/webp">
             <img src="/static/media/planets/image-moon.png">
-        </picture>
+        </picture> -->
 
         <picture hidden id="mars-image">
             <source srcset="/static/media/planets/image-mars.webp" type="image/webp">
@@ -59,12 +58,32 @@
             <img src="/static/media/planets/image-neptune.png">
         </picture>
 
+        <picture hidden id="venus-image">
+            <source srcset="/static/media/planets/image-venus.webp" type="image/webp">
+            <img src="/static/media/planets/image-venus.png">
+        </picture>
+
+        <picture hidden id="mercury-image">
+            <source srcset="/static/media/planets/image-mercur.webp" type="image/webp">
+            <img src="/static/media/planets/image-mercur.png">
+        </picture>
+
+        <picture hidden id="jupiter-image">
+            <source srcset="/static/media/planets/image-jupiter.webp" type="image/webp">
+            <img src="/static/media/planets/image-jupiter.png">
+        </picture>
+
+        <picture hidden id="saturn-image">
+            <source srcset="/static/media/planets/image-saturn.webp" type="image/webp">
+            <img src="/static/media/planets/image-saturn.png">
+        </picture>
+
         <div class="tab-list underline-indicators flex" role="tablist" aria-label="planets list">
             <button aria-selected="true" role="tab" aria-controls="earth-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
             data-image="earth-image">Terra</button>
 
-            <button aria-selected="false" role="tab" aria-controls="moon-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
-            data-image="moon-image">Luna</button>
+            <!-- <button aria-selected="false" role="tab" aria-controls="moon-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
+            data-image="moon-image">Luna</button> -->
 
             <button aria-selected="false" role="tab" aria-controls="mars-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
             data-image="mars-image">Marte</button>
@@ -74,6 +93,18 @@
 
             <button aria-selected="false" role="tab" aria-controls="neptune-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
             data-image="neptune-image">Neptun</button>
+
+            <button aria-selected="false" role="tab" aria-controls="venus-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
+            data-image="venus-image">Venus</button>
+
+            <button aria-selected="false" role="tab" aria-controls="mercury-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
+            data-image="mercury-image">Mercur</button>
+
+            <button aria-selected="false" role="tab" aria-controls="jupiter-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
+            data-image="jupiter-image">Jupiter</button>
+
+            <button aria-selected="false" role="tab" aria-controls="saturn-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
+            data-image="saturn-image">Saturn</button>
         </div>
 
         <article class="planets-info flow" id="earth-tab" tabindex="0" role="tabpanel">
@@ -90,7 +121,7 @@
         </article>
 
         
-        <article hidden class="planets-info flow" id="moon-tab" tabindex="0" role="tabpanel">
+        <!-- <article hidden class="planets-info flow" id="moon-tab" tabindex="0" role="tabpanel">
             <h2 class="fs-800 uppercase ff-serif">Luna</h2>
 
             <p>Luna este un corp astronomic care orbitează planeta Pământ, fiind singurul său satelit natural permanent. Este al cincilea cel mai mare⁠(d) satelit natural din Sistemul Solar, și cel mai mare dintre sateliți planetari relativ la dimensiunea planetei pe care o orbitează (obiectul său primar). </p>
@@ -106,7 +137,7 @@
                     <p class="ff-serif uppercase">{{ moonPercentage }} %</p>
                 </div>
             </div>
-        </article>
+        </article> -->
 
                 
         <article hidden class="planets-info flow" id="mars-tab" tabindex="0" role="tabpanel">
@@ -162,10 +193,84 @@
                 </div>
 
             </div>
-        </article>        
+        </article> 
+        
+        <article hidden class="planets-info flow" id="venus-tab" tabindex="0" role="tabpanel">
+            <h2 class="fs-800 uppercase ff-serif">Venus</h2>
 
-      
+            <p>Venus cunoscut ca și Luceafărul este a doua planetă de la Soare. Este numită după zeița romană a iubirii și frumuseții. Este al treilea obiect natural ca luminozitate pe cerul nopții după Soare și Lună.</p>
+            <div class="planets-meta flex">
 
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Distanta aproximativa:</h3>
+                    <p class="ff-serif uppercase"> 61.000.000 km </p>
+                </div>
+
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Orbita Parcursa</h3>
+                    <p class="ff-serif uppercase">{{ venusPercentage }} %</p>
+                </div>
+
+            </div>
+        </article>
+        
+        <article hidden class="planets-info flow" id="mercury-tab" tabindex="0" role="tabpanel">
+            <h2 class="fs-800 uppercase ff-serif">Mercur</h2>
+
+            <p>Mercur este planeta cea mai apropiată de Soare, înconjurându-l o dată la fiecare 88 de zile pământene. Luminozitatea sa variază între -2,0 și 5,5 în magnitudine aparentă, dar nu este ușor de văzut fiindcă cea mai mare separare unghiulară (cea mai mare elongație) față de Soare este de doar 28,3°, însemnând că se poate vedea doar imediat după apusul Soarelui. </p>
+            <div class="planets-meta flex">
+
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Distanta aproximativa:</h3>
+                    <p class="ff-serif uppercase"> 77.000.000 km </p>
+                </div>
+
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Orbita Parcursa</h3>
+                    <p class="ff-serif uppercase">{{ mercuryPercentage }} %</p>
+                </div>
+
+            </div>
+        </article>
+        
+        <article hidden class="planets-info flow" id="jupiter-tab" tabindex="0" role="tabpanel">
+            <h2 class="fs-800 uppercase ff-serif">Jupiter</h2>
+
+            <p>Jupiter este a cincea planetă de la Soare și cea mai mare din Sistemul Solar. Este un gigant gazos cu o masă de o miime din cea a Soarelui, dar de două ori și jumătate decât masa totală a tuturor celorlalte planete din Sistemul Solar. </p>
+            <div class="planets-meta flex">
+
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Distanta aproximativa:</h3>
+                    <p class="ff-serif uppercase"> 588.000.000 km </p>
+                </div>
+
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Orbita Parcursa</h3>
+                    <p class="ff-serif uppercase">{{ jupiterPercentage }} %</p>
+                </div>
+
+            </div>
+        </article>
+
+        <article hidden class="planets-info flow" id="saturn-tab" tabindex="0" role="tabpanel">
+            <h2 class="fs-800 uppercase ff-serif">Saturn</h2>
+
+            <p>Saturn este a șasea planetă de la Soare și a doua ca mărime din Sistemul Solar, după Jupiter. Este un gigant gazos cu o rază medie de aproximativ nouă ori mai mare decât cea a Pământului.</p>
+            <div class="planets-meta flex">
+
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Distanta aproximativa:</h3>
+                    <p class="ff-serif uppercase"> 588.000.000 km </p>
+                </div>
+
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Orbita Parcursa</h3>
+                    <p class="ff-serif uppercase">{{ saturnPercentage }} %</p>
+                </div>
+
+            </div>
+        </article>
+    
     </main>
     
 </body>
