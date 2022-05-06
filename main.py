@@ -34,5 +34,15 @@ def commetsPage():
         enckePercentage = percentage.percentageDictionary["Encke"],
         fayePercentage = percentage.percentageDictionary["Faye"])
 
+@app.route('/dwarf')
+def dwarfPage():
+    return render_template(
+        'dwarf.html', 
+        plutoPercentage = percentage.percentageDictionary["Pluto"],
+        ceresPercentage = percentage.percentageDictionary["Ceres"],
+        haumeaPercentage = percentage.percentageDictionary["Haumea"],
+        makemakePercentage = percentage.percentageDictionary["Makemake"],
+        erisPercentage = percentage.percentageDictionary["Eris"])
+
 if __name__ == '__main__':
     app.run()

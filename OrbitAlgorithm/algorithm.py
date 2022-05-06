@@ -15,8 +15,8 @@ class Percentage:
 		self.OrbitPerihelion = 0
 		self.NewOrbitPerihelion = 0
 		self.percentageDictionary = {}
-		self.planetDictionary = {"Earth" : 365, "Moon" : 27, "Mars" : 687, "Uranus" : 30768, "Neptune" : 60195, "Venus" : 225, "Mercury" : 88, "Jupiter" : 4333, "Saturn" : 10756, "Halley" : 27510, "Encke" : 1200, "Faye" : 2700 }
-		self.planetArray = ["Earth", "Moon", "Mars", "Uranus", "Neptune", "Venus", "Mercury", "Jupiter", "Saturn", "Halley", "Encke", "Faye"]
+		self.planetDictionary = {"Earth" : 365, "Moon" : 27, "Mars" : 687, "Uranus" : 30768, "Neptune" : 60195, "Venus" : 225, "Mercury" : 88, "Jupiter" : 4333, "Saturn" : 10756, "Halley" : 27510, "Encke" : 1200, "Faye" : 2700, "Pluto" : 90580, "Ceres" : 1682, "Haumea" : 104094, "Makemake" : 111398, "Eris" : 203439}
+		self.planetArray = ["Earth", "Moon", "Mars", "Uranus", "Neptune", "Venus", "Mercury", "Jupiter", "Saturn", "Halley", "Encke", "Faye", "Pluto", "Ceres", "Haumea", "Makemake", "Eris"]
 
 
 	def Orbits(self):

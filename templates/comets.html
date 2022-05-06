@@ -25,7 +25,8 @@
             <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
                 <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="/"><span aria-hidden="true">00</span>Acasa</a>
                 <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="/planets"><span aria-hidden="true">01</span>Planete</a>
-                <li class="active"><a class=" ff-sans-cond uppercase text-white letter-spacing-2" href="/comets"><span aria-hidden="true">02</span>Comete</a>
+                <li><a class=" ff-sans-cond uppercase text-white letter-spacing-2" href="/dwarf"><span aria-hidden="true">02</span>Planete Pitice</a>
+                <li class="active"><a class=" ff-sans-cond uppercase text-white letter-spacing-2" href="/comets"><span aria-hidden="true">03</span>Comete</a>
             </ul>
         </nav>
     </header>
@@ -43,6 +44,11 @@
             <img src="/static/media/comets/image-encke.png">
         </picture>
 
+        <picture hidden id="faye-image">
+            <source srcset="/static/media/comets/image-faye.webp" type="image/webp">
+            <img src="/static/media/comets/image-faye.png">
+        </picture>
+
         <!-- <picture hidden id="moon-image">
             <source srcset="/static/media/planets/image-moon.webp" type="image/webp">
             <img src="/static/media/planets/image-moon.png">
@@ -55,6 +61,10 @@
 
             <button aria-selected="false" role="tab" aria-controls="encke-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
             data-image="encke-image">Encke</button>
+
+            
+            <button aria-selected="false" role="tab" aria-controls="faye-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
+            data-image="faye-image">Faye</button>
 
             <!-- <button aria-selected="false" role="tab" aria-controls="moon-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
             data-image="moon-image">Luna</button> -->
@@ -86,7 +96,18 @@
             </div>
         </article>
 
-        
+        <article hidden class="planets-info flow" id="faye-tab" tabindex="0" role="tabpanel">
+            <h2 class="fs-800 uppercase ff-serif">Faye</h2>
+      
+            <p>4P/Faye este o cometă periodică descoperită la 25 noiembrie 1843 de astronomul Hervé Faye la Observatorul din Paris. Cometa fusese de fapt observată pentru prima oară la 23 noiembrie, însă starea nefavorabilă a vremii a împiedicat confirmarea ei înainte de 25. </p>
+            <div class="planets-meta flex">
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Orbita Parcursa</h3>
+                    <p class="ff-serif uppercase">{{ fayePercentage }} %</p>
+                </div>
+            </div>
+        </article>
+
         <!-- <article hidden class="planets-info flow" id="moon-tab" tabindex="0" role="tabpanel">
             <h2 class="fs-800 uppercase ff-serif">Luna</h2>
 

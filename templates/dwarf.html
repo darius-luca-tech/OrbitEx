@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/media/images/logo-mobile.png">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap" rel="stylesheet">    
+    <title>Orbit Exploration</title>
+    <script src="/static/js/tabs-destination.js" defer></script>
+    <script src="/static/js/navbar-mobile.js" defer></script>
+</head>
+
+<body class="planets">
+    <header class="primary-header flex">
+        
+        <div class="logo">
+            <img href="#">
+        </div>
+    
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Meniu</span></button>
+        <nav>
+            <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
+                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="/"><span aria-hidden="true">00</span>Acasa</a>
+                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="/planets"><span aria-hidden="true">01</span>Planete</a>
+                <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="/dwarf"><span aria-hidden="true">02</span>Planete Pitice</a>
+                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="/comets"><span aria-hidden="true">03</span>Comete</a>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main" class="grid-container grid-container--planets flex">
+        <h1 class="numbered-title"><span aria-hidden="true">01</span>Alege Cometa:</h1>
+
+        <picture id="pluto-image">
+            <source srcset="/static/media/dwarf/image-pluto.webp" type="image/webp">
+            <img src="/static/media/dwarf/image-pluto.png">
+        </picture>
+
+        <picture hidden id="ceres-image">
+            <source srcset="/static/media/dwarf/image-ceres.webp" type="image/webp">
+            <img src="/static/media/dwarf/image-ceres.png">
+        </picture>
+
+        <picture hidden id="haumea-image">
+            <source srcset="/static/media/dwarf/image-haumea.webp" type="image/webp">
+            <img src="/static/media/dwarf/image-haumea.png">
+        </picture>
+
+        <picture hidden id="makemake-image">
+            <source srcset="/static/media/dwarf/image-makemake.webp" type="image/webp">
+            <img src="/static/media/dwarf/image-makemake.png">
+        </picture>
+
+        <picture hidden id="eris-image">
+            <source srcset="/static/media/dwarf/image-eris.webp" type="image/webp">
+            <img src="/static/media/dwarf/image-eris.png">
+        </picture>
+
+        <!-- <picture hidden id="moon-image">
+            <source srcset="/static/media/planets/image-moon.webp" type="image/webp">
+            <img src="/static/media/planets/image-moon.png">
+        </picture> -->
+
+
+        <div class="tab-list underline-indicators flex" role="tablist" aria-label="planets list">
+            <button aria-selected="true" role="tab" aria-controls="pluto-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
+            data-image="pluto-image">Pluto</button>
+
+            <button aria-selected="false" role="tab" aria-controls="ceres-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
+            data-image="ceres-image">Ceres</button>
+
+            <button aria-selected="false" role="tab" aria-controls="haumea-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
+            data-image="haumea-image">Haumea</button>
+
+            <button aria-selected="false" role="tab" aria-controls="makemake-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
+            data-image="makemake-image">Makemake</button>
+
+            <button aria-selected="false" role="tab" aria-controls="eris-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
+            data-image="eris-image">Eris</button>
+            
+
+            <!-- <button aria-selected="false" role="tab" aria-controls="moon-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
+            data-image="moon-image">Luna</button> -->
+
+            
+        </div>
+
+        <article class="planets-info flow" id="pluto-tab" tabindex="0" role="tabpanel">
+            <h2 class="fs-800 uppercase ff-serif">Pluto</h2>
+      
+            <p>Pluto este o planetă pitică din centura Kuiper, un inel de corpuri situate dincolo de orbita lui Neptun. A fost primul obiect descoperit în centura Kuiper și rămâne cel mai mare corp cunoscut din acea zonă. După ce Pluto a fost descoperită în 1930, a fost declarată a noua planetă de la Soare. </p>            
+            <div class="planets-meta flex">
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Orbita Parcursa</h3>
+                    <p class="ff-serif uppercase">{{ plutoPercentage }} %</p>
+                </div>
+            </div>
+        </article>
+
+        <article hidden class="planets-info flow" id="ceres-tab" tabindex="0" role="tabpanel">
+            <h2 class="fs-800 uppercase ff-serif">Ceres</h2>
+      
+            <p>Ceres este o planetă pitică aflată în centura de asteroizi. Clasificarea lui Ceres a fost schimbată de mai multe ori. După descoperirea sa, Ceres a fost considerat planetă, dar după aceea a fost reclasificat ca asteroid rămânând așa peste 150 de ani.</p>            
+            <div class="planets-meta flex">
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Orbita Parcursa</h3>
+                    <p class="ff-serif uppercase">{{ ceresPercentage }} %</p>
+                </div>
+            </div>
+        </article>
+
+        
+        <article hidden class="planets-info flow" id="haumea-tab" tabindex="0" role="tabpanel">
+            <h2 class="fs-800 uppercase ff-serif">Haumea</h2>
+            
+            <p>Haumea este, ca mărime, a treia planetă pitică, fiind situată în Centura Kuiper. A fost descoperită în 2004 de o echipă condusă de Mike Brown de la Observatorul Palomar din Statele Unite și în 2005 de o echipă condusă de J. L. Ortiz de la Observatorul Sierra Nevada din Spania; a doua variantă a fost contestată. </p>
+            <div class="planets-meta flex">
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Orbita Parcursa</h3>
+                    <p class="ff-serif uppercase">{{ haumeaPercentage }} %</p>
+                </div>
+            </div>
+        </article>
+
+        <article hidden class="planets-info flow" id="makemake-tab" tabindex="0" role="tabpanel">
+            <h2 class="fs-800 uppercase ff-serif">Makemake</h2>
+            
+            <p>Haumea este, ca mărime, a treia planetă pitică, fiind situată în Centura Kuiper. A fost descoperită în 2004 de o echipă condusă de Mike Brown de la Observatorul Palomar din Statele Unite și în 2005 de o echipă condusă de J. L. Ortiz de la Observatorul Sierra Nevada din Spania; a doua variantă a fost contestată. </p>
+            <div class="planets-meta flex">
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Orbita Parcursa</h3>
+                    <p class="ff-serif uppercase">{{ makemakePercentage }} %</p>
+                </div>
+            </div>
+        </article>
+
+        <article hidden class="planets-info flow" id="eris-tab" tabindex="0" role="tabpanel">
+            <h2 class="fs-800 uppercase ff-serif">Eris</h2>
+            
+            <p>Eris este cea mai masivă planetă pitică cunoscută din Sistemul nostru Solar. După masă, este al nouălea corp ceresc cunoscut din Sistemul Solar care se rotește direct în jurul Soarelui. Are cel puțin un satelit, numit Dysnomia. Eris este un obiect transneptunian din centura lui Kuiper, și a fost descoperit în 2003.</p>
+            <div class="planets-meta flex">
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Orbita Parcursa</h3>
+                    <p class="ff-serif uppercase">{{ erisPercentage }} %</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- <article hidden class="planets-info flow" id="moon-tab" tabindex="0" role="tabpanel">
+            <h2 class="fs-800 uppercase ff-serif">Luna</h2>
+
+            <p>Luna este un corp astronomic care orbitează planeta Pământ, fiind singurul său satelit natural permanent. Este al cincilea cel mai mare⁠(d) satelit natural din Sistemul Solar, și cel mai mare dintre sateliți planetari relativ la dimensiunea planetei pe care o orbitează (obiectul său primar). </p>
+
+            <div class="planets-meta flex">
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Distanta aproximativa:</h3>
+                    <p class="ff-serif uppercase">384,400 km</p>
+                </div>
+
+                <div>
+                    <h3 class="text-accent fs-200 uppercase">Orbita Parcursa</h3>
+                    <p class="ff-serif uppercase">{{ moonPercentage }} %</p>
+                </div>
+            </div>
+        </article> -->
+
+                
+    
+    
+    </main>
+    
+</body>
+</html>
